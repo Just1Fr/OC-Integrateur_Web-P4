@@ -4,11 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ohmyfood - Accueuil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-   
+    <header class="header">
+
+        <div class="header__back-logo">
+
+            <div class="header__back">
+                <button class="header__back__btn"><i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+
+            <div class="header__logo">
+                <img class="header__logo__img" src="assets/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
+            </div>
+
+        </div>
+
+        <div class="header__location">
+            <button class="header__location__btn">
+                <i class="fa-solid fa-location-dot"></i>
+                Paris, Belleville
+            </button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="description">
+            <h1 class="description__title">Réservez le menu qui vous convient</h1>
+            <p class="description__txt">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+            <button class="description__btn">Explorer nos restaurants</button>
+        </section>
+
+        <section class="fonctionnement">
+            <h2>Fonctionnement</h2>
+            <div class="fonctionnement__cards">
+                <article class="fonctionnement__card">
+                    <div class="fonctionnement__card__number">1</div>
+                    <div class="fonctionnement__card__content">
+                        <i class="fa-solid fa-mobile-alt"></i>
+                        <b>Choissisez un restaurant</b>
+                    </div>
+                </article>
+                <article class="fonctionnement__card">
+                    <div class="fonctionnement__card__number">2</div>
+                    <div class="fonctionnement__card__content">
+                        <i class="fa-solid fa-list"></i>
+                        <b>Composez votre menu</b>
+                    </div>
+                </article>
+                <article class="fonctionnement__card">
+                    <div class="fonctionnement__card__number">3</div>
+                    <div class="fonctionnement__card__content">
+                        <i class="fa-solid fa-store"></i>
+                        <b>Dégustez au restaurant</b>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="restaurants">
+            <h2>Restaurants</h2>
+            <div class="restaurants__cards">
+                <article class="restaurants__card">
+                    <a href="#">
+                        <div class="restaurants__card__img-container">
+                            <img class="restaurants__card__img" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant">
+                        </div>
+                        <div class="restaurants__card__content">
+                            <div class="restaurants__card__txt">
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <div class="restaurants__card__heart">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <img class="footer__logo" src="assets/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
+
+        <ul class="footer__liens">
+            <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant<a href="#"></a></li>
+            <li><i class="fa-solid fa-hands-helping"></i>Devenir partenaire<a href="#"></a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </footer>
+
 </body>
 </html>
