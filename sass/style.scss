@@ -1,30 +1,19 @@
+@use 'colors';
+@use 'effects';
+@use 'header';
+@use 'footer';
+
+@mixin txt-wrap {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 * {
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
 }
 
-// .titre {
-//     font-family: "Shrikhand", serif;
-// }
-
-h1, h2 {
-    font-size: 24px;
-    font-weight: 700;
-    padding-bottom: 20px;
-}
-
-h3 {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-p {
-    font-size: 18px;
-    font-weight: 300;
-}
-
-body, h1, h2, h3, p, ul {
+body, h1, h2, h3, h4, p, ul {
     margin: 0;
 }
 
@@ -38,84 +27,53 @@ a {
     text-decoration: none;
 }
 
-.card-img {
-    object-fit: cover;
-}
 
-////////////
-// Header //
-////////////
+//---------------------------------------------//
+//                Page accueil                 //
+//---------------------------------------------//
 
-.header {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+//////////////////
+// Presentation //
+//////////////////
 
-    &__back-logo {
-        display: flex;
-        align-items: center;
-        height: 63px;
-    }
-
-    &__back {
-        display: flex;
-        align-items: center;
-
-        &__btn {
-            width: 30px;
-            height: 30px;
-            background: none;
-            border: none;
-        }
-    }
-
-    &__logo {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-
-        &__img {
-            height: 36px;
-        }
-    }
-
-    &__location {
-        display: flex;
-        justify-content: center;
-        height: 50px;
-        background-color: #EAEAEA;
-
-        &__btn {
-            display: flex;
-            align-items: center;
-            gap: 17px;
-            background: none;
-            border: none;
-        }
-    }
-}
-
-/////////////////
-// Description //
-/////////////////
-
-.description {
-    padding: 40px ;
+.presentation {
+    padding: 40px 0;
     text-align: center;
-    background-color: #F6F6F6;
+    background-color: colors.$white;
+
+    &__title {
+        padding: 0 45px ;
+        font-size: 24px;
+        font-weight: 700;
+    }
 
     &__txt {
-        padding-bottom: 30px;
-        color: #353535;
+        padding: 15px 0;
+        color: colors.$greyDark;
+        font-size: 18px;
+        font-weight: 300;
     }
 
     &__btn {
         height: 50px;
+        margin: 15px 0;
         padding: 15px 20px;
-        background: linear-gradient(#9356DC, #FF79DA);
+        background: colors.$gradient;
         border: none;
         border-radius: 25px;
         color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        z-index: 1;
+        font-size: 16px;
+        font-weight: 500;
+        transition: all .3s;
+        @include txt-wrap;
+        max-width: 90%;
+
+        &:hover {
+            filter: brightness(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
     }
 }
 
@@ -124,12 +82,19 @@ a {
 ////////////////////
 
 .fonctionnement {
-    padding: 48px 20px;
+    padding: 42px 20px;
+
+    &__title {
+        padding: 5px 0;
+        font-size: 24px;
+        font-weight: 700;
+    }
 
     &__cards {
         display: flex;
         flex-direction: column;
         gap: 25px;
+        padding: 25px 0;
     }
 
     &__card {
@@ -137,26 +102,42 @@ a {
         align-items: center;
 
         &__number {
-            z-index: 1;
+            min-width: 24px;
             width: 24px;
             height: 24px;
             margin-right: -12px;
             text-align: center;
             align-content: center;
-            font-size: 14.18px;
+            font-size: 14px;
+            font-weight: 500;
             color: white;
-            background: #9356DC;
+            background: colors.$primary;
             border-radius: 100%;
+            z-index: 2;
         }
 
         &__content {
             display: flex;
             align-items: center;
             gap: 25px;
-            width: 82%;
+            box-sizing: border-box;
+            width: 100%;
+            height: 72px;
             padding: 20px 30px;
             border-radius: 20px;
-            background: #F6F6F6;
+            background: colors.$white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            z-index: 1;
+
+            .txt {
+                font-size: 16px;
+                font-weight: 500;
+                @include txt-wrap;
+            }
+
+            .fa-solid {
+                font-size: 18px;
+            }
         }
     }
 }
@@ -166,21 +147,59 @@ a {
 /////////////////
 
 .restaurants {
-    padding: 48px 20px;
-    background: #F6F6F6;
+    padding: 50px 18px;
+    background: colors.$white;
+
+    &__title {
+        padding: 4px 0;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 16px 0;
+    }
 
     &__card {
         border-radius: 15px;
         background: white;
         overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        transition: all .3s;
+
+        &:hover {
+            // filter: brightness(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+        }
         
         &__img-container {
-            height: 145px;
+            height: 175px;
+            position: relative;
+        }
+        
+        &__new {
+            width: 80px;
+            height: 29px;
+            position: absolute;
+            top: 13px;
+            right: 12px;
+            text-align: center;
+            align-content: center;
+            border-radius: 2px;
+            background: colors.$tertiary;
+            color: colors.$tertiaryDark;
+            font-size: 14px;
+            font-weight: 500;
         }
 
         &__img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
         }
 
         &__content {
@@ -193,40 +212,194 @@ a {
             display: flex;
             flex-direction: column;
             gap: 4px;
+            max-width: 75%;
+
+            .title {
+                font-size: 18px;
+                font-weight: 700;
+                @include txt-wrap;
+            }
+
+            .subtitle {
+                font-size: 17px;
+                font-weight: 300;
+                @include txt-wrap;
+            }
         }
 
         &__heart {
             display: flex;
             align-self: center;
-            padding-right: 14px;
-            i {
-                font-size: 22px;
+            margin-right: 13px;
+            padding: 0;
+            background: none;
+            border: none;
+            
+            .heart {
+                width: 22px;
+                height: 21px;
+                fill: none;
+                & > path {
+                    stroke: #101010;
+                }
+            }
+
+            &:hover {
+                .heart {
+                    fill: none;
+                    & > path {
+                        stroke: none;
+                        fill: url(#gradient);
+                    }
+                }
             }
         }
     }
 }
 
-////////////
-// Footer //
-////////////
+//---------------------------------------------//
+//              Pages restaurants              //
+//---------------------------------------------//
 
-.footer {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 22px 25px;
-    background: #353535;
-    color: white;
+.main {
+    &__picture {
+        height: 275px;
+        margin-bottom: -55px;
+        position: relative;
+        z-index: -1;
 
-    &__logo {
-        height: 27px;
-        width: fit-content;
-        filter: invert(100%);
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
-    &__liens {
+    &__menu {
         display: flex;
         flex-direction: column;
-        gap: 7px;
+        gap: 30px;
+        padding: 32px 12px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        background-color: colors.$white;
+
+        &__headline {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5px;
+
+            &__title {
+                font-family: "Shrikhand", serif;
+                font-size: 28px;
+            }
+
+            &__heart {
+                display: flex;
+                padding: 0;
+                margin-right: 20px;
+                background: none;
+                border: none;
+                
+                .heart {
+                    width: 22px;
+                    height: 21px;
+                    fill: none;
+                    & > path {
+                        stroke: #101010;
+                    }
+                }
+
+                &:hover {
+                    .heart {
+                        fill: none;
+                        & > path {
+                            stroke: none;
+                            fill: url(#gradient);
+                        }
+                    }
+                }
+            }
+        }
+
+        &__section {
+
+            &__title {
+                font-size: 16px;
+                font-weight: 300;
+            }
+
+            &__line {
+                width: 40px;
+                height: 3px;
+                margin: 4px 0 12px 0;
+                background: colors.$tertiary;
+            }
+
+            &__cards {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                .card {
+
+                    &--btn {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 5px;
+                        width: 100%;
+                        height: 69px;
+                        text-align: start;
+                        padding: 0 15px;
+                        border: none;
+                        border-radius: 15px;
+                        background-color: white;
+                    }
+
+                    &__title {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                    &__txt-price {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .txt {
+                            font-size: 15px;
+                            font-weight: 300;
+                        }
+
+                        .price {
+                            font-size: 15px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__commander {
+            align-self: center;
+            width: 186px;
+            height: 50px;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            background: colors.$gradient;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            z-index: 1;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all .3s;
+
+            &:hover {
+                filter: brightness(1.1);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            }
+        }
     }
 }
