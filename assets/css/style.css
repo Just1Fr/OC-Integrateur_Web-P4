@@ -140,25 +140,25 @@ a {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-.fonctionnement {
+.instructions {
   padding: 42px 20px;
 }
-.fonctionnement__title {
+.instructions__title {
   padding: 5px 0;
   font-size: 24px;
   font-weight: 700;
 }
-.fonctionnement__cards {
+.instructions__cards {
   display: flex;
   flex-direction: column;
   gap: 25px;
   padding: 25px 0;
 }
-.fonctionnement__card {
+.instructions__card {
   display: flex;
   align-items: center;
 }
-.fonctionnement__card__number {
+.instructions__card__number {
   min-width: 24px;
   width: 24px;
   height: 24px;
@@ -172,7 +172,7 @@ a {
   border-radius: 100%;
   z-index: 2;
 }
-.fonctionnement__card__content {
+.instructions__card__content {
   display: flex;
   align-items: center;
   gap: 25px;
@@ -186,21 +186,21 @@ a {
   z-index: 1;
   transition: all 0.3s;
 }
-.fonctionnement__card__content .txt {
+.instructions__card__content .txt {
   font-size: 16px;
   font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.fonctionnement__card__content .fa-solid {
+.instructions__card__content .fa-solid {
   font-size: 18px;
   transition: all 0.3s;
 }
-.fonctionnement__card__content:hover {
+.instructions__card__content:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
-.fonctionnement__card__content:hover .fa-solid {
+.instructions__card__content:hover .fa-solid {
   color: #9356DC;
 }
 
@@ -224,7 +224,6 @@ a {
   background: white;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  z-index: 1;
   transition: all 0.3s;
 }
 .restaurants__card:hover {
@@ -390,7 +389,7 @@ a {
   font-size: 15px;
   font-weight: 700;
 }
-.main__menu__commander {
+.main__menu__order {
   align-self: center;
   width: 186px;
   height: 50px;
@@ -399,12 +398,11 @@ a {
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  z-index: 1;
   font-size: 16px;
   font-weight: 500;
   transition: all 0.3s;
 }
-.main__menu__commander:hover {
+.main__menu__order:hover {
   filter: brightness(1.1);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }/*# sourceMappingURL=style.css.map */

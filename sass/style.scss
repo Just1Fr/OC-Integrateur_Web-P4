@@ -53,7 +53,7 @@ a {
 }
 
 //---------------------------------------------//
-//                Page accueil                 //
+//                   Homepage                  //
 //---------------------------------------------//
 
 //////////////////
@@ -102,11 +102,11 @@ a {
     }
 }
 
-////////////////////
-// Fonctionnement //
-////////////////////
+//////////////////
+// Instructions //
+//////////////////
 
-.fonctionnement {
+.instructions {
     padding: 42px 20px;
 
     &__title {
@@ -203,7 +203,6 @@ a {
         background: white;
         overflow: hidden;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        z-index: 1;
         transition: all .3s;
 
         &:hover {
@@ -271,7 +270,7 @@ a {
 }
 
 //---------------------------------------------//
-//              Pages restaurants              //
+//              Restaurant pages               //
 //---------------------------------------------//
 
 .main {
@@ -370,7 +369,7 @@ a {
             }
         }
 
-        &__commander {
+        &__order {
             align-self: center;
             width: 186px;
             height: 50px;
@@ -379,7 +378,6 @@ a {
             color: white;
             background: colors.$gradient;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-            z-index: 1;
             font-size: 16px;
             font-weight: 500;
             transition: all .3s;
