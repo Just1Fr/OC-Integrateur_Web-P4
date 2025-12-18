@@ -12,6 +12,14 @@
 </head>
 
 <body>
+    <svg id="svg-template">
+        <defs>
+            <linearGradient id="svg-gradient" gradientTransform="rotate(90)">
+                <stop class="begin" offset="0%" stop-color="#9356DC"/>
+                <stop class="end" offset="100%" stop-color="#FF79DA"/>
+            </linearGradient>
+        </defs>
+    </svg>
     <header class="header">
 
         <div class="header__back-logo">
@@ -36,7 +44,7 @@
         <section class="presentation">
             <h1 class="presentation__title">Réservez le menu qui vous convient</h1>
             <p class="presentation__txt">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-            <button class="presentation__btn">Explorer nos restaurants</button>
+            <a class="presentation__btn" href="#restaurants">Explorer nos restaurants</a>
         </section>
 
         <section class="fonctionnement">
@@ -46,27 +54,27 @@
                     <div class="fonctionnement__card__number">1</div>
                     <div class="fonctionnement__card__content">
                         <i class="fa-solid fa-mobile-alt"></i>
-                        <p class="txt">Choisissez un restaurant</p>
+                        <h3 class="txt">Choisissez un restaurant</h3>
                     </div>
                 </article>
                 <article class="fonctionnement__card">
                     <div class="fonctionnement__card__number">2</div>
                     <div class="fonctionnement__card__content">
                         <i class="fa-solid fa-list"></i>
-                        <p class="txt">Composez votre menu</p>
+                        <h3 class="txt">Composez votre menu</h3>
                     </div>
                 </article>
                 <article class="fonctionnement__card">
                     <div class="fonctionnement__card__number">3</div>
                     <div class="fonctionnement__card__content">
                         <i class="fa-solid fa-store"></i>
-                        <p class="txt">Dégustez au restaurant</p>
+                        <h3 class="txt">Dégustez au restaurant</h3>
                     </div>
                 </article>
             </div>
         </section>
 
-        <section class="restaurants">
+        <section class="restaurants" id="restaurants">
             <h2 class="restaurants__title">Restaurants</h2>
             <div class="restaurants__cards">
                 <article class="restaurants__card">
@@ -80,17 +88,11 @@
                                 <h3 class="title">La palette du goût</h3>
                                 <p class="subtitle">Ménilmontant</p>
                             </div>
-                            <button class="restaurants__card__heart">
+                            <div class="restaurants__card__heart">
                                 <svg class="heart" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <linearGradient id="gradient" gradientTransform="rotate(90)">
-                                            <stop class="begin" offset="0%" stop-color="#9356DC"/>
-                                            <stop class="end" offset="100%" stop-color="#FF79DA"/>
-                                        </linearGradient>
-                                    </defs>
                                     <path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
                                 </svg>
-                            </button>
+                            </div>
                         </div>
                     </a>
                 </article>
@@ -105,17 +107,11 @@
                                 <h3 class="title">La note enchantée</h3>
                                 <p class="subtitle">Charonne</p>
                             </div>
-                            <button class="restaurants__card__heart">
+                            <div class="restaurants__card__heart">
                                 <svg class="heart" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <linearGradient id="gradient" gradientTransform="rotate(90)">
-                                            <stop class="begin" offset="0%" stop-color="#9356DC"/>
-                                            <stop class="end" offset="100%" stop-color="#FF79DA"/>
-                                        </linearGradient>
-                                    </defs>
                                     <path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
                                 </svg>
-                            </button>
+                            </div>
                         </div>
                     </a>
                 </article>
@@ -129,17 +125,11 @@
                                 <h3 class="title">À la française</h3>
                                 <p class="subtitle">Cité Rouge</p>
                             </div>
-                            <button class="restaurants__card__heart">
+                            <div class="restaurants__card__heart">
                                 <svg class="heart" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <linearGradient id="gradient" gradientTransform="rotate(90)">
-                                            <stop class="begin" offset="0%" stop-color="#9356DC"/>
-                                            <stop class="end" offset="100%" stop-color="#FF79DA"/>
-                                        </linearGradient>
-                                    </defs>
                                     <path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
                                 </svg>
-                            </button>
+                            </div>
                         </div>
                     </a>
                 </article>
@@ -153,17 +143,11 @@
                                 <h3 class="title">Le délice des sens</h3>
                                 <p class="subtitle">Folie-Méricourt</p>
                             </div>
-                            <button class="restaurants__card__heart">
+                            <div class="restaurants__card__heart">
                                 <svg class="heart" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <linearGradient id="gradient" gradientTransform="rotate(90)">
-                                            <stop class="begin" offset="0%" stop-color="#9356DC"/>
-                                            <stop class="end" offset="100%" stop-color="#FF79DA"/>
-                                        </linearGradient>
-                                    </defs>
                                     <path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
                                 </svg>
-                            </button>
+                            </div>
                         </div>
                     </a>
                 </article>
@@ -179,7 +163,7 @@
         <ul class="footer__liens">
             <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
             <li><a href="#"><i class="fa-solid fa-hands-helping"></i>Devenir partenaire</a></li>
-            <li><a href="#"></href>Mentions légales</a></li>
+            <li><a href="#">Mentions légales</a></li>
             <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
         </ul>
 
