@@ -1,5 +1,4 @@
 @use 'colors';
-@use 'effects';
 @use 'header';
 @use 'footer';
 
@@ -320,6 +319,7 @@ a {
             &__title {
                 font-size: 16px;
                 font-weight: 300;
+                text-transform: uppercase;
             }
 
             &__line {
@@ -336,33 +336,66 @@ a {
 
                 .card {
                     display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    gap: 5px;
+                    flex-direction: row;
                     height: 69px;
-                    text-align: start;
-                    padding: 0 15px;
                     border-radius: 15px;
                     background: white;
+                    overflow: hidden;
 
-                    &__title {
-                        font-size: 18px;
-                        font-weight: 500;
-                    }
-
-                    &__txt-price {
+                    &__content {
                         display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-
-                        .txt {
-                            font-size: 15px;
-                            font-weight: 300;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 5px;
+                        width: 100%;
+                        padding: 0 15px;
+                        transition: width .25s;
+                        
+                        &__title {
+                            font-size: 18px;
+                            font-weight: 500;
+                            // @include txt-wrap; // bug
                         }
 
-                        .price {
+                        &__txt-price {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+
+                        &__txt {
+                            font-size: 15px;
+                            font-weight: 300;
+                            // @include txt-wrap; // bug
+                        }
+
+                        &__price {
                             font-size: 15px;
                             font-weight: 700;
+                        }
+                    }
+
+                    &__selected {
+                        display: flex;
+                        align-items: center;
+                        width: 0;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        background: colors.$tertiary;
+                        color: white;
+                        font-size: 20px;
+                        transition: width .25s;
+
+                        .fa-solid {
+                            padding-left: calc(25% + 5px)
+                        }
+                    }
+
+                    &:hover {
+                        .card__content {
+                            width: 82%;
+                        }
+                        .card__selected {
+                            width: 18%;
                         }
                     }
                 }

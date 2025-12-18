@@ -349,6 +349,7 @@ a {
 .main__menu__section__title {
   font-size: 16px;
   font-weight: 300;
+  text-transform: uppercase;
 }
 .main__menu__section__line {
   width: 40px;
@@ -363,31 +364,56 @@ a {
 }
 .main__menu__section__cards .card {
   display: flex;
+  flex-direction: row;
+  height: 69px;
+  border-radius: 15px;
+  background: white;
+  overflow: hidden;
+}
+.main__menu__section__cards .card__content {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  height: 69px;
-  text-align: start;
+  width: 100%;
   padding: 0 15px;
-  border-radius: 15px;
-  background: white;
+  transition: width 0.25s;
 }
-.main__menu__section__cards .card__title {
+.main__menu__section__cards .card__content__title {
   font-size: 18px;
   font-weight: 500;
 }
-.main__menu__section__cards .card__txt-price {
+.main__menu__section__cards .card__content__txt-price {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
-.main__menu__section__cards .card__txt-price .txt {
+.main__menu__section__cards .card__content__txt {
   font-size: 15px;
   font-weight: 300;
 }
-.main__menu__section__cards .card__txt-price .price {
+.main__menu__section__cards .card__content__price {
   font-size: 15px;
   font-weight: 700;
+}
+.main__menu__section__cards .card__selected {
+  display: flex;
+  align-items: center;
+  width: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #99E2D0;
+  color: white;
+  font-size: 20px;
+  transition: width 0.25s;
+}
+.main__menu__section__cards .card__selected .fa-solid {
+  padding-left: calc(25% + 5px);
+}
+.main__menu__section__cards .card:hover .card__content {
+  width: 82%;
+}
+.main__menu__section__cards .card:hover .card__selected {
+  width: 18%;
 }
 .main__menu__order {
   align-self: center;

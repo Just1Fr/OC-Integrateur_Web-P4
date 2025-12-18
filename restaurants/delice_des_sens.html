@@ -12,6 +12,14 @@
 </head>
 
 <body>
+    <svg id="svg-template">
+        <defs>
+            <linearGradient id="svg-gradient" gradientTransform="rotate(90)">
+                <stop class="begin" offset="0%" stop-color="#9356DC"/>
+                <stop class="end" offset="100%" stop-color="#FF79DA"/>
+            </linearGradient>
+        </defs>
+    </svg>
     <header class="header">
         <div class="header__back-logo">
 
@@ -26,8 +34,155 @@
         </div>
     </header>
 
-    <main>
-        <img class="main-picture" src="../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo plat Folie-Méricourt - restaurant Le délice des sens">
+    <main class="main">
+
+        <div class="main__picture">
+            <img class="main__picture__img" src="../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo plat Folie-Méricourt - restaurant Le délice des sens">
+        </div>
+
+        <div class="main__menu">
+
+            <div class="main__menu__headline">
+                <h1 class="main__menu__headline__title">La palette du goût</h1>
+                <div class="main__menu__headline__heart">
+                    <svg class="heart" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <section class="main__menu__section">
+                <h2 class="main__menu__section__title">Entrées</h2>
+                <div class="main__menu__section__line"></div>
+                <div class="main__menu__section__cards">
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__content__title">Fricassée d'escargots</h3>
+                            <div class="card__content__txt-price">
+                                <p class="card__content__txt">Au piment d'Espelette</p>
+                                <p class="card__content__price">25€</p>
+                            </div>
+                        </div>
+                        <div class="card__selected">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__content__title"></h3>
+                            <div class="card__content__txt-price">
+                                <p class="card__content__txt"></p>
+                                <p class="card__content__price">€</p>
+                            </div>
+                        </div>
+                        <div class="card__selected">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__content__title"></h3>
+                            <div class="card__content__txt-price">
+                                <p class="card__content__txt"></p>
+                                <p class="card__content__price">€</p>
+                            </div>
+                        </div>
+                        <div class="card__selected">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="main__menu__section">
+                <h2 class="main__menu__section__title">Plats</h2>
+                <div class="main__menu__section__line"></div>
+                <div class="main__menu__section__cards">
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__content__title"></h3>
+                            <div class="card__content__txt-price">
+                                <p class="card__content__txt"></p>
+                                <p class="card__content__price">€</p>
+                            </div>
+                        </div>
+                        <div class="card__selected">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__content__title"></h3>
+                            <div class="card__content__txt-price">
+                                <p class="card__content__txt"></p>
+                                <p class="card__content__price">€</p>
+                            </div>
+                        </div>
+                        <div class="card__selected">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__content__title"></h3>
+                            <div class="card__content__txt-price">
+                                <p class="card__content__txt"></p>
+                                <p class="card__content__price">€</p>
+                            </div>
+                        </div>
+                        <div class="card__selected">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="main__menu__section">
+                <h2 class="main__menu__section__title">Desserts</h2>
+                <div class="main__menu__section__line"></div>
+                <div class="main__menu__section__cards">
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__content__title"></h3>
+                            <div class="card__content__txt-price">
+                                <p class="card__content__txt"></p>
+                                <p class="card__content__price">€</p>
+                            </div>
+                        </div>
+                        <div class="card__selected">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__content__title"></h3>
+                            <div class="card__content__txt-price">
+                                <p class="card__content__txt"></p>
+                                <p class="card__content__price">€</p>
+                            </div>
+                        </div>
+                        <div class="card__selected">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__content__title"></h3>
+                            <div class="card__content__txt-price">
+                                <p class="card__content__txt"></p>
+                                <p class="card__content__price">€</p>
+                            </div>
+                        </div>
+                        <div class="card__selected">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <button class="main__menu__order">Commander</button>
+
+        </div>
     </main>
 
     <footer class="footer">
