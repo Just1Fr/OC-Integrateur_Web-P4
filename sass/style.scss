@@ -28,8 +28,8 @@
 }
 
 @keyframes appear {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 * {
@@ -59,6 +59,102 @@ a {
 //---------------------------------------------//
 //                   Homepage                  //
 //---------------------------------------------//
+
+////////////
+// Loader //
+////////////
+
+@keyframes lockScroll {
+    from { overflow: hidden; }
+    to { overflow: scroll; }
+}
+
+body:has(> .loader) {
+    animation: lockScroll 3s step-end;
+}
+
+@keyframes hideLoader {
+    from {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 50;
+        background: colors.$greyLight;
+    }
+    to { 
+        height: 0;
+        width: 0;
+        background: none;
+    }
+}
+
+@keyframes hideLoaderTxt {
+    from {
+        padding: 20px 0;
+        font-size: 28px;
+    }
+    to { 
+        font-size: 0;
+    }
+}
+
+@keyframes loading {
+    from {
+        border: 8px dotted colors.$primaryLight;
+        border-top-color: colors.$primary;
+        transform: rotate(0deg);
+    }
+    50% {
+        border: 8px dotted colors.$primaryLight;
+        border-top-color: colors.$secondary;
+    }
+    to {
+        border: 8px dotted colors.$primaryLight;
+        border-top-color: colors.$primary;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hideLoaderCircle {
+    from {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+    to { 
+        height: 0;
+        width: 0;
+        border: none;
+    }
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    animation: 
+        hideLoader 3s step-end,
+        appear reverse .5s 2.5s;
+
+    &__circle {
+        width: 0;
+        height: 0;
+        border: none;
+        animation: 
+            loading 1.5s 2 ease-in-out,
+            hideLoaderCircle 3s step-end;
+    }
+
+    &__txt {
+        font-family: "Shrikhand", serif;
+        font-weight: 400;
+        font-size: 0;
+        animation: hideLoaderTxt 3s step-end;
+    }
+}
 
 //////////////////
 // Presentation //
