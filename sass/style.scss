@@ -78,59 +78,46 @@ body:has(> .loader) {
         height: 100%;
         width: 100%;
         position: fixed;
-        z-index: 50;
+        z-index: 9999;
         background: colors.$greyLight;
     }
     to { 
         height: 0;
         width: 0;
+        z-index: -1;
         background: none;
-    }
-}
-
-@keyframes hideLoaderTxt {
-    from {
-        padding: 20px 0;
-        font-size: 28px;
-    }
-    to { 
-        font-size: 0;
     }
 }
 
 @keyframes loading {
     from {
-        border: 8px dotted colors.$primaryLight;
-        border-top-color: colors.$primary;
-        transform: rotate(0deg);
+        box-shadow: -30px -30px .5px 0 colors.$primary, 0 -30px .5px 0 colors.$primary, 30px -30px .5px 0 colors.$primary;
     }
-    50% {
-        border: 8px dotted colors.$primaryLight;
-        border-top-color: colors.$secondary;
+    14.286% {
+        box-shadow: -30px -50px .5px 0 colors.$primary, 0 -30px .5px 0 colors.$primary, 30px -30px .5px 0 colors.$primary;
+    }
+    28.571% {
+        box-shadow: -30px -25px .5px 0 colors.$secondary, 0 -30px .5px 0 colors.$primary, 30px -30px .5px 0 colors.$primary;
+    }
+    42.857% {
+        box-shadow: -30px -30px .5px 0 colors.$primary, 0 -50px .5px 0 colors.$primary, 30px -30px .5px 0 colors.$primary;
+    }
+    57.143% {
+        box-shadow: -30px -30px .5px 0 colors.$primary, 0 -25px .5px 0 colors.$secondary, 30px -30px .5px 0 colors.$primary;
+    }
+    71.429% {
+        box-shadow: -30px -30px .5px 0 colors.$primary, 0 -30px .5px 0 colors.$primary, 30px -50px .5px 0 colors.$primary;
+    }
+    85.714% {
+        box-shadow: -30px -30px .5px 0 colors.$primary, 0 -30px .5px 0 colors.$primary, 30px -25px .5px 0 colors.$secondary;
     }
     to {
-        border: 8px dotted colors.$primaryLight;
-        border-top-color: colors.$primary;
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes hideLoaderCircle {
-    from {
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
-    }
-    to { 
-        height: 0;
-        width: 0;
-        border: none;
+        box-shadow: -30px -30px .5px 0 colors.$primary, 0 -30px .5px 0 colors.$primary, 30px -30px .5px 0 colors.$primary;
     }
 }
 
 .loader {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 0;
@@ -139,20 +126,13 @@ body:has(> .loader) {
         hideLoader 3s step-end,
         appear reverse .5s 2.5s;
 
-    &__circle {
-        width: 0;
-        height: 0;
-        border: none;
-        animation: 
-            loading 1.5s 2 ease-in-out,
-            hideLoaderCircle 3s step-end;
-    }
-
-    &__txt {
-        font-family: "Shrikhand", serif;
-        font-weight: 400;
-        font-size: 0;
-        animation: hideLoaderTxt 3s step-end;
+    &__dots {
+        width: 20px;
+        height: 20px;
+        margin-top: 20px;
+        border-radius: 50%;
+        box-shadow: none;
+        animation: loading 1.25s 2.4;
     }
 }
 
@@ -169,6 +149,7 @@ body:has(> .loader) {
         padding: 0 45px ;
         font-size: 24px;
         font-weight: 700;
+        @include txt-wrap;
     }
 
     &__txt {
@@ -213,6 +194,7 @@ body:has(> .loader) {
         padding: 5px 0;
         font-size: 24px;
         font-weight: 700;
+        @include txt-wrap;
     }
 
     &__cards {
@@ -289,6 +271,7 @@ body:has(> .loader) {
         padding: 4px 0;
         font-size: 24px;
         font-weight: 700;
+        @include txt-wrap;
     }
 
     &__cards {
@@ -408,6 +391,7 @@ body:has(> .loader) {
                 font-family: "Shrikhand", serif;
                 font-size: 28px;
                 font-weight: 400;
+                @include txt-wrap;
             }
 
             &__heart {
@@ -465,7 +449,6 @@ body:has(> .loader) {
                         width: 100%;
                         min-width: 0;
                         padding: 0 15px;
-                        transition: width .25s;
                         
                         &__title {
                             font-size: 18px;
@@ -476,7 +459,7 @@ body:has(> .loader) {
                         &__txt-price {
                             display: flex;
                             justify-content: space-between;
-                            gap: 10px;
+                            gap: 5px;
                         }
 
                         &__txt {
@@ -501,18 +484,15 @@ body:has(> .loader) {
                         transition: width .25s;
 
                         .fa-solid {
-                            padding-left: calc(25% + 5px)
+                            padding: 0 20px;
                         }
                     }
 
                     &:hover {
                         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
-                        .card__content {
-                            width: calc(100% - 18%);
-                        }
                         .card__selected {
-                            width: 18%;
+                            width: 68px;
                         }
                     }
                 }

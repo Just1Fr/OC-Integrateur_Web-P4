@@ -11,21 +11,28 @@
     &__logo {
         width: fit-content;
         height: 17px;
-        padding: 4px 0;
+        padding: 5px 0;
         filter: brightness(16);
     }
 
-    &__liens {
+    &__list {
         display: flex;
         flex-direction: column;
         gap: 7px;
         font-size: 16px;
         font-weight: 500;
 
-        .fa-solid {
-            font-size: 13px;
-            width: 16.25px;
-            margin-right: 2%;
+        &__item {
+            &__link {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+
+                .fa-solid {
+                    font-size: 13px;
+                    width: 16.25px;
+                }
+            }
         }
     }
 }
