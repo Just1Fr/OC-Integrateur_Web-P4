@@ -246,6 +246,7 @@ body:has(> .loader) {
             .fa-solid {
                 font-size: 18px;
                 transition: all .3s;
+                color: colors.$grey;
             }
 
             &:hover {
@@ -519,6 +520,117 @@ body:has(> .loader) {
                 filter: brightness(1.1);
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
             }
+        }
+    }
+}
+
+
+//---------------------------------------------//
+//                 Responsive                  //
+//---------------------------------------------//
+
+// Tablet
+@media (min-width: 769px) {
+    .restaurants {
+        &__cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        &__card {
+            flex: 1;
+            flex-basis: 40%;
+        }
+    }
+}
+
+// Desktop
+@media (min-width: 1023.5px) {
+    
+    .header {
+        &__back-logo {
+            height: 96px;
+        }
+        &__logo {
+            padding: 0;
+            &__img {
+                height: 35px;
+            }
+        }
+    }
+
+    .presentation,
+    .instructions,
+    .restaurants
+    {
+        display: flex;
+        flex-direction: column;
+        max-width: 1080px;
+
+        &__title,
+        &__cards
+        {
+            padding: 0;
+        }
+    }
+    
+    .presentation {
+        align-items: center;
+        gap: 18px;
+        padding: 30px max(calc(50% - 1080px/2), 20px);
+
+        &__title {
+            font-size: 40px;
+        }
+
+        &__btn {
+            width: fit-content;
+            margin: 0;
+        }
+    }
+
+    .instructions {
+        gap: 25px;
+        padding: 50px max(calc(50% - 1080px/2), 20px);
+
+        &__cards {
+            flex-direction: row;
+        }
+
+        &__card {
+            flex: 1;
+        }
+    }
+
+    .restaurants {
+        gap: 28px;
+        padding: 30px max(calc(50% - 1080px/2), 20px);
+
+        &__cards {
+            justify-content: space-between;
+            row-gap: 50px;
+        }
+        &__card {
+            max-width: 490px;
+        }
+    }
+
+    .footer {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 50px;
+        height: 114px;
+        padding: 30px 25px;
+        padding-top: 65px;
+        box-sizing: border-box;
+
+        &__logo {
+            padding: 0 45px;
+        }
+
+        &__list {
+            flex-direction: row;
+            gap: 25px;
         }
     }
 }

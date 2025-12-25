@@ -26,6 +26,7 @@
             
             .fa-solid {
                 font-size: 20px;
+                color: colors.$greyDark;
             }
         }
     }
@@ -49,5 +50,6 @@
         background-color: colors.$greyLight;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
         z-index: 1;
+        color: colors.$greyDark;
     }
 }
