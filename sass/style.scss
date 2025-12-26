@@ -361,14 +361,16 @@ body:has(> .loader) {
 
 .main {
     &__picture {
-        height: 275px;
+        height: fit-content;
         margin-bottom: -55px;
         position: relative;
         z-index: -1;
 
         &__img {
             width: 100%;
-            height: 100%;
+            height: 1%;
+            min-height: 275px;
+            max-height: 383px;
             object-fit: cover;
         }
     }
@@ -529,6 +531,10 @@ body:has(> .loader) {
 //                 Responsive                  //
 //---------------------------------------------//
 
+
+// Homepage, Header & Footer
+
+
 // Tablet
 @media (min-width: 769px) {
     .restaurants {
@@ -631,6 +637,67 @@ body:has(> .loader) {
         &__list {
             flex-direction: row;
             gap: 25px;
+        }
+    }
+}
+
+
+// Restaurant pages
+
+
+// Tablet
+@media (min-width: 769px) {
+    .main {
+        &__menu {
+            padding: clamp(32px, 4%, 40px) max(calc(50% - 768px/2), 13px);
+        }
+    }
+}
+
+// Desktop
+@media (min-width: 1023.5px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+
+        &__picture {
+            margin-bottom: -40px;
+
+            &__img {
+                height: 383px;
+            }
+        }
+
+        &__menu {
+            display: flex;
+            align-self: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            width: 100%;
+            max-width: 1055px;
+            padding: 40px 0;
+
+            &__headline {
+                justify-content: center;
+                gap: 24px;
+                margin-top: 10px;
+                padding: 0;
+
+                &__heart {
+                    margin-right: 0;
+                }
+            }
+
+            &__section {
+                width: 100%;
+                max-width: 634px;
+                margin: 0;
+            }
+
+            &__order {
+                margin-bottom: 0;
+            }
         }
     }
 }
