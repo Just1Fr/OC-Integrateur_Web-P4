@@ -1,11 +1,11 @@
-@use 'colors';
+@use '../common' as *;
 
 .footer {
     display: flex;
     flex-direction: column;
     gap: 16px;
     padding: 22px 25px;
-    background: colors.$greyDark;
+    background: $greyDark;
     color: white;
 
     &__logo {

@@ -1,0 +1,189 @@
+@use '../common' as *;
+
+.main {
+
+    //////////////////
+    // Main picture //
+    //////////////////
+
+    &__picture {
+        height: fit-content;
+        margin-bottom: -55px;
+        position: relative;
+        z-index: -1;
+
+        &__img {
+            width: 100%;
+            height: 1%;
+            min-height: 275px;
+            max-height: 383px;
+            object-fit: cover;
+        }
+    }
+
+    //////////
+    // Menu //
+    //////////
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 32px 13px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        background: $white;
+
+        &__headline {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4px;
+
+            &__title {
+                font-family: "Shrikhand", serif;
+                font-size: 28px;
+                font-weight: 400;
+                @include txt-wrap;
+            }
+
+            &__heart {
+                display: flex;
+                align-self: center;
+                margin-right: 24px;
+                @include svg-heart;
+            }
+        }
+
+        /////////////////////////////////
+        // "Entrée", "Plat", "Dessert" //
+        /////////////////////////////////
+
+        &__section {
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: appear 2s forwards;
+            &:nth-of-type(2) {
+                animation-delay: .5s;
+            }
+            &:nth-of-type(3) {
+                animation-delay: 1s;
+            }
+
+            &__title {
+                font-size: 16px;
+                font-weight: 300;
+                text-transform: uppercase;
+            }
+
+            &__line {
+                width: 40px;
+                height: 3px;
+                margin: 5px 0 12px 0;
+                background: $colorTertiary;
+            }
+
+            ////////////
+            // Dishes //
+            ////////////
+
+            &__cards {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+        
+                .card {
+                    display: flex;
+                    flex-direction: row;
+                    height: 69px;
+                    border-radius: 15px;
+                    background: white;
+                    overflow: hidden;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                    transition: box-shadow .25s;
+
+                    &__content {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 5px;
+                        width: 100%;
+                        min-width: 0;
+                        padding: 0 15px;
+                        
+                        &__title {
+                            font-size: 18px;
+                            font-weight: 500;
+                            @include txt-wrap;
+                        }
+
+                        &__txt-price {
+                            display: flex;
+                            justify-content: space-between;
+                            gap: 5px;
+                        }
+
+                        &__txt {
+                            font-size: 15.04px;
+                            font-weight: 300;
+                            @include txt-wrap;
+                        }
+
+                        &__price {
+                            font-size: 15.04px;
+                            font-weight: 700;
+                        }
+                    }
+
+                    &__selected {
+                        display: flex;
+                        align-items: center;
+                        width: 0;
+                        background: $colorTertiary;
+                        color: white;
+                        font-size: 20px;
+                        transition: width .25s;
+
+                        .fa-solid {
+                            padding: 0 20px;
+                        }
+                    }
+
+                    &:hover {
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+                        .card__selected {
+                            width: 68px;
+                        }
+                    }
+                }
+            }
+        }
+
+        //////////////////
+        // Order button //
+        //////////////////
+
+        &__order {
+            align-self: center;
+            width: 186px;
+            max-width: 100%;
+            height: 50px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            background: $gradient;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            font-size: 16px;
+            font-weight: 500;
+            transition: all .5s;
+            @include txt-wrap;
+
+            &:hover {
+                filter: brightness(1.1);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+}

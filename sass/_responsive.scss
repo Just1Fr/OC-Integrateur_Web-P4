@@ -1,0 +1,174 @@
+///////////////////////////////
+// Homepage, Header & Footer //
+///////////////////////////////
+
+// Tablet
+@media (min-width: 769px) {
+
+    .restaurants {
+
+        &__cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        &__card {
+            flex: 1;
+            flex-basis: 40%;
+        }
+    }
+}
+
+// Desktop
+@media (min-width: 1023.5px) {
+    
+    .header {
+
+        &__back-logo {
+            height: 96px;
+        }
+        
+        &__logo {
+            padding: 0;
+            &__img {
+                height: 35px;
+            }
+        }
+    }
+
+    .presentation,
+    .instructions,
+    .restaurants
+    {
+        display: flex;
+        flex-direction: column;
+        max-width: 1080px;
+
+        &__title,
+        &__cards
+        {
+            padding: 0;
+        }
+    }
+    
+    .presentation {
+        align-items: center;
+        gap: 18px;
+        padding: 30px max(calc(50% - 1080px/2), 20px);
+
+        &__title {
+            font-size: 40px;
+        }
+
+        &__btn {
+            width: fit-content;
+            margin: 0;
+        }
+    }
+
+    .instructions {
+        gap: 25px;
+        padding: 50px max(calc(50% - 1080px/2), 20px);
+
+        &__cards {
+            flex-direction: row;
+        }
+
+        &__card {
+            flex: 1;
+        }
+    }
+
+    .restaurants {
+        gap: 28px;
+        padding: 30px max(calc(50% - 1080px/2), 20px);
+
+        &__cards {
+            justify-content: space-between;
+            row-gap: 50px;
+        }
+        &__card {
+            max-width: 490px;
+        }
+    }
+
+    .footer {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 50px;
+        height: 114px;
+        padding: 30px 25px;
+        padding-top: 65px;
+        box-sizing: border-box;
+
+        &__logo {
+            padding: 0 45px;
+        }
+
+        &__list {
+            flex-direction: row;
+            gap: 25px;
+        }
+    }
+}
+
+//////////////////////
+// Restaurant pages //
+//////////////////////
+
+// Tablet
+@media (min-width: 769px) {
+    .main {
+        &__menu {
+            padding: clamp(32px, 4%, 40px) max(calc(50% - 768px/2), 13px);
+        }
+    }
+}
+
+// Desktop
+@media (min-width: 1023.5px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+
+        &__picture {
+            margin-bottom: -40px;
+
+            &__img {
+                height: 383px;
+            }
+        }
+
+        &__menu {
+            display: flex;
+            align-self: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            width: 100%;
+            max-width: 1055px;
+            padding: 40px 0;
+
+            &__headline {
+                justify-content: center;
+                gap: 24px;
+                margin-top: 10px;
+                padding: 0;
+
+                &__heart {
+                    margin-right: 0;
+                }
+            }
+
+            &__section {
+                width: 100%;
+                max-width: 634px;
+                margin: 0;
+            }
+
+            &__order {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

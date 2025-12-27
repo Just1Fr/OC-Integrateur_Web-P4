@@ -1,90 +1,3 @@
-.header {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.header__back-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 63px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  z-index: 2;
-}
-.header__back {
-  left: 25px;
-  position: absolute;
-}
-.header__back__btn {
-  width: 30px;
-  height: 30px;
-  background: none;
-  border: none;
-}
-.header__back__btn .fa-solid {
-  font-size: 20px;
-  color: #353535;
-}
-.header__logo {
-  padding-top: 14px;
-}
-.header__logo__img {
-  height: 29px;
-}
-.header__location {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  gap: 17px;
-  font-size: 16px;
-  font-weight: 500;
-  background-color: #EAEAEA;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 1;
-  color: #353535;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 22px 25px;
-  background: #353535;
-  color: white;
-}
-.footer__logo {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 17px;
-  padding: 5px 0;
-  filter: brightness(16);
-}
-.footer__list {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  font-size: 16px;
-  font-weight: 500;
-}
-.footer__list__item__link {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.footer__list__item__link .fa-solid {
-  font-size: 13px;
-  width: 16.25px;
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -109,6 +22,14 @@ a {
   width: 0;
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes lockScroll {
   from {
     overflow: hidden;
@@ -117,10 +38,6 @@ a {
     overflow: scroll;
   }
 }
-body:has(> .loader) {
-  animation: lockScroll 3s step-end;
-}
-
 @keyframes hideLoader {
   from {
     height: 100%;
@@ -162,23 +79,6 @@ body:has(> .loader) {
     box-shadow: -30px -30px 0.5px 0 #9356DC, 0 -30px 0.5px 0 #9356DC, 30px -30px 0.5px 0 #9356DC;
   }
 }
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 0;
-  height: 0;
-  animation: hideLoader 3s step-end, appear reverse 0.5s 2.5s;
-}
-.loader__dots {
-  width: 20px;
-  height: 20px;
-  margin-top: 20px;
-  border-radius: 50%;
-  box-shadow: none;
-  animation: loading 1.25s 2.4;
-}
-
 .presentation {
   padding: 40px 0;
   text-align: center;
@@ -552,6 +452,106 @@ body:has(> .loader) {
 .main__menu__order:hover {
   filter: brightness(1.1);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.header__back-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+.header__back {
+  left: 25px;
+  position: absolute;
+}
+.header__back__btn {
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+}
+.header__back__btn .fa-solid {
+  font-size: 20px;
+  color: #353535;
+}
+.header__logo {
+  padding-top: 14px;
+}
+.header__logo__img {
+  height: 29px;
+}
+.header__location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  gap: 17px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #EAEAEA;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  color: #353535;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 25px;
+  background: #353535;
+  color: white;
+}
+.footer__logo {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 17px;
+  padding: 5px 0;
+  filter: brightness(16);
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.footer__list__item__link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.footer__list__item__link .fa-solid {
+  font-size: 13px;
+  width: 16.25px;
+}
+
+body:has(> .loader) {
+  animation: lockScroll 3s step-end;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: 0;
+  animation: hideLoader 3s step-end, appear reverse 0.5s 2.5s;
+}
+.loader__dots {
+  width: 20px;
+  height: 20px;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: none;
+  animation: loading 1.25s 2.4;
 }
 
 @media (min-width: 769px) {

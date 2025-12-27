@@ -1,0 +1,54 @@
+@use 'colors' as *;
+
+@keyframes appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes lockScroll {
+    from { overflow: hidden; }
+    to { overflow: scroll; }
+}
+
+@keyframes hideLoader {
+    from {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 9999;
+        background: $greyLight;
+    }
+    to { 
+        height: 0;
+        width: 0;
+        z-index: -1;
+        background: none;
+    }
+}
+
+@keyframes loading {
+    from {
+        box-shadow: -30px -30px .5px 0 $colorPrimary, 0 -30px .5px 0 $colorPrimary, 30px -30px .5px 0 $colorPrimary;
+    }
+    14.286% {
+        box-shadow: -30px -50px .5px 0 $colorPrimary, 0 -30px .5px 0 $colorPrimary, 30px -30px .5px 0 $colorPrimary;
+    }
+    28.571% {
+        box-shadow: -30px -25px .5px 0 $colorSecondary, 0 -30px .5px 0 $colorPrimary, 30px -30px .5px 0 $colorPrimary;
+    }
+    42.857% {
+        box-shadow: -30px -30px .5px 0 $colorPrimary, 0 -50px .5px 0 $colorPrimary, 30px -30px .5px 0 $colorPrimary;
+    }
+    57.143% {
+        box-shadow: -30px -30px .5px 0 $colorPrimary, 0 -25px .5px 0 $colorSecondary, 30px -30px .5px 0 $colorPrimary;
+    }
+    71.429% {
+        box-shadow: -30px -30px .5px 0 $colorPrimary, 0 -30px .5px 0 $colorPrimary, 30px -50px .5px 0 $colorPrimary;
+    }
+    85.714% {
+        box-shadow: -30px -30px .5px 0 $colorPrimary, 0 -30px .5px 0 $colorPrimary, 30px -25px .5px 0 $colorSecondary;
+    }
+    to {
+        box-shadow: -30px -30px .5px 0 $colorPrimary, 0 -30px .5px 0 $colorPrimary, 30px -30px .5px 0 $colorPrimary;
+    }
+}

@@ -1,0 +1,26 @@
+@use 'colors' as *;
+
+@mixin txt-wrap {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin svg-heart {
+    .heart {
+        width: 22px;
+        height: 21px;
+        fill: url(#svg-gradient);
+        fill-opacity: 0;
+        stroke: $black;
+        transition: all .3s;
+    }
+
+    &:hover {
+        .heart {
+            fill-opacity: 100%;
+            stroke: transparent;
+            stroke-width: 0;
+        }
+    }
+}

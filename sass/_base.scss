@@ -1,0 +1,23 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+body, h1, h2, h3, h4, p, ul {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+#svg-template {
+    display: block;
+    height: 0;
+    width: 0;
+}
