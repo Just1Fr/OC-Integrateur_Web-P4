@@ -283,7 +283,7 @@ a {
   transition: all 0.3s;
 }
 .restaurants__card__heart:hover .heart {
-  fill-opacity: 100%;
+  fill-opacity: 1;
   stroke: transparent;
   stroke-width: 0;
 }
@@ -340,7 +340,7 @@ a {
   transition: all 0.3s;
 }
 .main__menu__headline__heart:hover .heart {
-  fill-opacity: 100%;
+  fill-opacity: 1;
   stroke: transparent;
   stroke-width: 0;
 }
