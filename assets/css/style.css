@@ -88,9 +88,6 @@ a {
   padding: 0 45px;
   font-size: 24px;
   font-weight: 700;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .presentation__txt {
   padding: 15px 0;
@@ -322,9 +319,6 @@ a {
   font-family: "Shrikhand", serif;
   font-size: 28px;
   font-weight: 400;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .main__menu__headline__heart {
   display: flex;
